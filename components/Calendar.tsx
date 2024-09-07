@@ -2,11 +2,10 @@
 import React, { useState } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
-import dayjs from "dayjs";
 import { getDates } from "@/utils/getDays";
 
 const FutureDateSelector = () => {
-  const [selectedDate, setSelectedDate] = useState<any>(null);
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
   const [selectedDays, setSelectedDays] = useState(new Set());
 
   const [recurrenceType, setRecurrenceType] = useState<string>("none");
